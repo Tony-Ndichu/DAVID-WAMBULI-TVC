@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
+
+body {
+  margin: 0;
+}
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+/* Standard syntax */
+@keyframes example {
+  from {top: -20px;}
+  to {top: 0px;}
+}
+
+.navbar-mobile ul {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  margin: 0;
+  padding: 1rem 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+.no-bullets {
+  list-style-type: none;
+}
+
+.navbar-mobile li {
+  flex: 1 1 auto;
+    margin: 0;
+    height: 100%;
+    text-align: center;
+    font-size: 0.75rem;
+    color: black;
+}
+
+.non-sticky {
+  display: block;
+}
+
+.sticky {
+  display: block !important;
+}
+
+@media only screen and (min-width: 480px) {
+  .sticky {
+  display: block !important;
+  animation-name: example;
+  animation-duration: 0.3s;
+}
+
+.non-sticky {
+  display: none;
+}
+}
