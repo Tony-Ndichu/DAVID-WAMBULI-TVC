@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton|Libre+Franklin&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sumana&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
 
 body {
   margin: 0;
@@ -35,7 +41,7 @@ body {
     height: 100%;
     text-align: center;
     font-size: 0.75rem;
-    color: black;
+    color: #0c2340;
 }
 
 .non-sticky {
@@ -44,6 +50,7 @@ body {
 
 .sticky {
   display: block !important;
+  z-index: 10;
 }
 
 @media only screen and (min-width: 480px) {
