@@ -1,13 +1,15 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { Home } from './views';
+import { Home, Contact, Academics } from './views';
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
         <Switch>
-          <Route exact path="/" component={Home} />;
+          <Route exact path="/" component={Home} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/academics" component={Academics} />
         </Switch>
       </BrowserRouter>
     </>

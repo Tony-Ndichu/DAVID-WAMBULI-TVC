@@ -1,4 +1,4 @@
-import { Home, About } from '../views';
+import { Home, Contact } from '../views';
 
 const routes = [
   {
@@ -6,11 +6,6 @@ const routes = [
     name: 'LandingPage',
     component: Home
   },
-  {
-    path: '/about',
-    name: 'AboutUs',
-    component: About
-  }
 ];
 
 export default routes;

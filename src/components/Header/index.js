@@ -5,7 +5,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import styled from 'styled-components';
 import Slide from '@material-ui/core/Slide';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import Box from '@material-ui/core/Box';
 import Sticky from 'react-sticky-el';
 import ShieldLogo from '../../assets/images/shield.svg';
 import { SecondaryBar } from '../SecondaryBar';
@@ -18,7 +17,8 @@ const useStyles = makeStyles(theme => ({
   headerStyle: {
     display: 'flex',
     backgroundColor: '#0c2340',
-    flexWrap: 'nowrap'
+    flexWrap: 'nowrap',
+    borderBottom: '6px solid #081629'
   },
   menuButton: {
     marginRight: theme.spacing(2)
@@ -48,11 +48,7 @@ const useStyles = makeStyles(theme => ({
 
 function HideOnScroll(props) {
   const { children, window } = props;
-  // Note that you normally won't need to set the window ref as useScrollTrigger
-  // will default to window.
-  // This is only being set here because the demo is in an iframe.
   const trigger = useScrollTrigger({ target: window ? window() : undefined });
-  console.log('trigger===>', trigger);
 
   return (
     <Slide appear={false} direction="down" in={!trigger}>
@@ -78,7 +74,7 @@ export const Header = props => {
 
             <MenuItems id="menus">
               <Item>Home</Item>
-              <Item>Gallery</Item>
+              <Item>Academics</Item>
               <Item>Media Center</Item>
               <Item>Contacts</Item>
               <Item>Charges</Item>
@@ -91,7 +87,7 @@ export const Header = props => {
         <SecondaryBar />
       </Sticky>
 
-      <Cont>
+      {/* <Cont>
         <Box my={2}>
           {[...new Array(70)]
             .map(
@@ -102,7 +98,7 @@ Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
             )
             .join('\n')}
         </Box>
-      </Cont>
+      </Cont> */}
     </div>
   );
 };
@@ -118,9 +114,6 @@ const LeftSide = styled.div`
     width: 350px;
   }
 `;
-const Cont = styled.div`
-  width: 100%;
-`;
 
 const MenuItems = styled.div`
   display: none;
@@ -132,6 +125,8 @@ const MenuItems = styled.div`
 `;
 
 const Item = styled.div`
+font-family: 'Sumana', serif;
+
   @media only screen and (min-width: 960px) {
     padding: 0px 20px 0px 20px;
   }
