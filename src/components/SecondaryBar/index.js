@@ -14,7 +14,8 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1
   },
   secondaryBar: {
-    backgroundColor: 'white'
+    backgroundColor: 'white',
+    borderBottom: '3px solid #d2d2d2'
   }
 }));
 
