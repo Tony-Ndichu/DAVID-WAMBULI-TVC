@@ -1,27 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { Header } from '../components/Header';
 import { CoursesOfferedAndAdmissions } from '../components/CoursesOfferedAndAdmissions';
 import { CourseTable } from '../components/CourseTable';
 import { ShortCourses } from '../components/ShortCourses';
 
-export const Academics = () => (
-  <>
-    <Header />
-    <CoursesOfferedAndAdmissions />
+export const Academics = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
-    <Container>
-      <Title>Course Table</Title>
+  return (
+    <>
+      <Header />
+      <CoursesOfferedAndAdmissions />
 
-      <CourseTable />
-    </Container>
+      <Container>
+        <Title>Course Table</Title>
 
-    <ContainerTwo>
-      <Title>Short Courses</Title>
-      <ShortCourses />
-    </ContainerTwo>
-  </>
-);
+        <CourseTable />
+      </Container>
+
+      <ContainerTwo>
+        <Title>Short Courses</Title>
+        <ShortCourses />
+      </ContainerTwo>
+    </>
+  );
+};
 
 const Title = styled.div`
   font-family: 'Anton', sans-serif;

@@ -87,6 +87,7 @@ const Item = styled.div`
   margin: auto;
   text-align: center;
   font-size: 0.75rem;
+  cursor: pointer;
 
   @media only screen and (min-width: 960px) {
     flex-direction: row;
