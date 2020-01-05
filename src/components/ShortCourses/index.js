@@ -49,61 +49,28 @@ function createData(
 }
 
 const rows = [
+  createData('Electrical Wireman', '-', '-', '-', '-', '3 Months', '-', 'NITA'),
   createData(
-    'Electrical & Electronic Engineering',
-    'C-',
-    'D',
-    'KCSE',
-    '3 Years',
-    '2 Years',
-    '1 Year',
-    'KNEC'
-  ),
-  createData('I.C.T', 'C-', 'D', '-', '3 Years', '2 Years', '-', 'KNEC'),
-  createData(
-    'Human Resource Management',
-    'C-',
-    'D',
-    '-',
-    '3 Years',
-    '2 Years',
-    '-',
-    'KNEC'
-  ),
-  createData(
-    'Business Manaagement',
-    'C-',
-    'D',
-    '-',
-    '3 Years',
-    '2 Years',
-    '-',
-    'KNEC'
-  ),
-  createData(
-    'Automotive & Mechanical Engineering',
+    'Computer System Application Proficiency',
     '-',
     '-',
     '-',
     '-',
+    '2 Months',
     '-',
-    '-',
-    '-'
-  ),
-  createData('Beauty Therapy', '-', '-', '-', '-', '-', '-', '-')
+    'DWTVC'
+  )
 ];
 
 const useStyles = makeStyles({
   table: {
     width: '100%'
   },
-  tableCell: {
-  },
-  wrapper: {
-  }
+  tableCell: {},
+  wrapper: {}
 });
 
-export const CourseTable = () => {
+export const ShortCourses = () => {
   const classes = useStyles();
 
   return (
@@ -188,4 +155,4 @@ export const CourseTable = () => {
   );
 };
 
-export default CourseTable;
+export default ShortCourses;

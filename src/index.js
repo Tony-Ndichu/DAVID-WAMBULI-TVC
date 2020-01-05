@@ -10,11 +10,21 @@ import {
   faMapMarkerAlt,
   faPhone,
   faEnvelopeOpenText,
+  faBook
 } from '@fortawesome/free-solid-svg-icons';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-library.add(faHome, faEnvelope, faImages, faBars, faMapMarkerAlt, faPhone, faEnvelopeOpenText);
+library.add(
+  faHome,
+  faEnvelope,
+  faImages,
+  faBars,
+  faMapMarkerAlt,
+  faPhone,
+  faEnvelopeOpenText,
+  faBook
+);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
