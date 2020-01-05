@@ -91,17 +91,7 @@ export const Header = props => {
                 {' '}
                 <Item>Academics</Item>
               </Link>
-              <Link
-                to="#"
-                style={{
-                  textDecoration: 'none',
-                  color: 'white',
-                  cursor: 'pointer'
-                }}
-              >
-                {' '}
-                <Item>Media Center</Item>
-              </Link>
+
               <Link
                 to="/contact"
                 style={{
@@ -112,6 +102,18 @@ export const Header = props => {
               >
                 {' '}
                 <Item>Contacts</Item>
+              </Link>
+
+              <Link
+                to="#"
+                style={{
+                  textDecoration: 'none',
+                  color: 'white',
+                  cursor: 'pointer'
+                }}
+              >
+                {' '}
+                <Item>Media Center</Item>
               </Link>
             </MenuItems>
           </Toolbar>
