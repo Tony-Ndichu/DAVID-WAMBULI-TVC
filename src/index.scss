@@ -6,6 +6,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
 
+
 body {
   margin: 0;
 }
@@ -26,7 +27,6 @@ body {
   flex-wrap: nowrap;
   align-items: flex-end;
   margin: 0;
-  padding: 1rem 0;
   opacity: 1;
   visibility: visible;
 }
@@ -36,12 +36,13 @@ body {
 }
 
 .navbar-mobile li {
-  flex: 1 1 auto;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+   padding: 10px;
     height: 100%;
-    text-align: center;
     font-size: 0.75rem;
-    color: #0c2340;
+    justify-content: center;
+    margin: auto;  
 }
 
 .non-sticky {
@@ -54,6 +55,16 @@ body {
 }
 
 @media only screen and (min-width: 480px) {
+
+  .navbar-mobile li {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100%;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
   .sticky {
   display: block !important;
   animation-name: example;

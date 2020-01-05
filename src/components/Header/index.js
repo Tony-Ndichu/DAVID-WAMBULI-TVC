@@ -6,8 +6,9 @@ import styled from 'styled-components';
 import Slide from '@material-ui/core/Slide';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Sticky from 'react-sticky-el';
+import { Link } from 'react-router-dom';
 import ShieldLogo from '../../assets/images/shield.svg';
-import { SecondaryBar } from '../SecondaryBar';
+import SecondaryBar from '../SecondaryBar';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -73,11 +74,45 @@ export const Header = props => {
             </LeftSide>
 
             <MenuItems id="menus">
-              <Item>Home</Item>
-              <Item>Academics</Item>
-              <Item>Media Center</Item>
-              <Item>Contacts</Item>
-              <Item>Charges</Item>
+              <Link
+                to="/home"
+                style={{
+                  textDecoration: 'none',
+                  color: 'white',
+                  cursor: 'pointer'
+                }}
+              >
+                <Item>Home</Item>
+              </Link>
+              <Link
+                to="/academics"
+                style={{ textDecoration: 'none', color: 'white' }}
+              >
+                {' '}
+                <Item>Academics</Item>
+              </Link>
+              <Link
+                to="#"
+                style={{
+                  textDecoration: 'none',
+                  color: 'white',
+                  cursor: 'pointer'
+                }}
+              >
+                {' '}
+                <Item>Media Center</Item>
+              </Link>
+              <Link
+                to="/contact"
+                style={{
+                  textDecoration: 'none',
+                  color: 'white',
+                  cursor: 'pointer'
+                }}
+              >
+                {' '}
+                <Item>Contacts</Item>
+              </Link>
             </MenuItems>
           </Toolbar>
         </AppBar>
@@ -86,19 +121,6 @@ export const Header = props => {
       <Sticky className="non-sticky">
         <SecondaryBar />
       </Sticky>
-
-      {/* <Cont>
-        <Box my={2}>
-          {[...new Array(70)]
-            .map(
-              () => `Cras mattis consectetur purus sit amet fermentum.
-Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`
-            )
-            .join('\n')}
-        </Box>
-      </Cont> */}
     </div>
   );
 };
@@ -125,10 +147,12 @@ const MenuItems = styled.div`
 `;
 
 const Item = styled.div`
-font-family: 'Sumana', serif;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.75rem;
 
   @media only screen and (min-width: 960px) {
     padding: 0px 20px 0px 20px;
+    font-size: 1.125rem;
   }
 `;
 
