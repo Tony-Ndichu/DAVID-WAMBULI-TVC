@@ -60,11 +60,11 @@ export const SecondaryBar = props => {
             <Description>Contacts</Description>
           </Item>
 
-          <Item>
+          <Item onClick={() => redirectTo('media')}>
             <Icon>
               <FontAwesomeIcon icon="images" />
             </Icon>
-            <Description>Gallery</Description>
+            <Description>Media</Description>
           </Item>
         </Wrapper>
       </AppBar>

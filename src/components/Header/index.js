@@ -88,7 +88,6 @@ export const Header = props => {
                 to="/academics"
                 style={{ textDecoration: 'none', color: 'white' }}
               >
-                {' '}
                 <Item>Academics</Item>
               </Link>
 
@@ -100,19 +99,17 @@ export const Header = props => {
                   cursor: 'pointer'
                 }}
               >
-                {' '}
                 <Item>Contacts</Item>
               </Link>
 
               <Link
-                to="#"
+                to="/media"
                 style={{
                   textDecoration: 'none',
                   color: 'white',
                   cursor: 'pointer'
                 }}
               >
-                {' '}
                 <Item>Media Center</Item>
               </Link>
             </MenuItems>
